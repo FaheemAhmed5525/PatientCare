@@ -14,7 +14,6 @@
 		0D80A0032D2E3BD400557D5E /* PatientCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0022D2E3BD400557D5E /* PatientCareUITests.swift */; };
 		0D80A0052D2E3BD400557D5E /* PatientCareUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0042D2E3BD400557D5E /* PatientCareUITestsLaunchTests.swift */; };
 		0D80A0222D2E3CA500557D5E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0112D2E3CA500557D5E /* HomeView.swift */; };
-		0D80A0232D2E3CA500557D5E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0122D2E3CA500557D5E /* HomeViewModel.swift */; };
 		0D80A0242D2E3CA500557D5E /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0132D2E3CA500557D5E /* UserDataModel.swift */; };
 		0D80A0252D2E3CA500557D5E /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0152D2E3CA500557D5E /* AuthDataModel.swift */; };
 		0D80A0262D2E3CA500557D5E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0162D2E3CA500557D5E /* AuthManager.swift */; };
@@ -22,8 +21,6 @@
 		0D80A0282D2E3CA500557D5E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0182D2E3CA500557D5E /* LoginView.swift */; };
 		0D80A0292D2E3CA500557D5E /* PasswordRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0192D2E3CA500557D5E /* PasswordRecoveryView.swift */; };
 		0D80A02A2D2E3CA500557D5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D80A01B2D2E3CA500557D5E /* GoogleService-Info.plist */; };
-		0D80A02B2D2E3CA500557D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D80A01C2D2E3CA500557D5E /* Assets.xcassets */; };
-		0D80A02C2D2E3CA500557D5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D80A01D2D2E3CA500557D5E /* Preview Assets.xcassets */; };
 		0D80A02D2D2E3CA500557D5E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A01F2D2E3CA500557D5E /* RootView.swift */; };
 		0D80A02E2D2E3CA500557D5E /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0202D2E3CA500557D5E /* FirebaseManager.swift */; };
 		0D80A0312D2E3D1F00557D5E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A0302D2E3D1F00557D5E /* FirebaseAnalytics */; };
@@ -50,6 +47,12 @@
 		0D80A05B2D2E3D1F00557D5E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A05A2D2E3D1F00557D5E /* FirebaseStorage */; };
 		0D80A05D2D2E3D1F00557D5E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A05C2D2E3D1F00557D5E /* FirebaseStorageCombine-Community */; };
 		0D80A05F2D2E3D1F00557D5E /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A05E2D2E3D1F00557D5E /* FirebaseVertexAI */; };
+		0DB51AF42D2FA76E0016748E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AF32D2FA76E0016748E /* HomeViewModel.swift */; };
+		0DB51AF72D2FA8320016748E /* PatientDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AF52D2FA8320016748E /* PatientDataModel.swift */; };
+		0DB51AF82D2FA8320016748E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AF62D2FA8320016748E /* HealthKitManager.swift */; };
+		0DB51AFC2D2FB38C0016748E /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AFB2D2FB38C0016748E /* SimulationView.swift */; };
+		0DB51AFE2D2FB4610016748E /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AFD2D2FB4610016748E /* SimulationViewModel.swift */; };
+		0DE60DDA2D2E885100966C8B /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE60DD92D2E885100966C8B /* PermissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +83,6 @@
 		0D80A0022D2E3BD400557D5E /* PatientCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCareUITests.swift; sourceTree = "<group>"; };
 		0D80A0042D2E3BD400557D5E /* PatientCareUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCareUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0D80A0112D2E3CA500557D5E /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0D80A0122D2E3CA500557D5E /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		0D80A0132D2E3CA500557D5E /* UserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		0D80A0152D2E3CA500557D5E /* AuthDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
 		0D80A0162D2E3CA500557D5E /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -88,10 +90,17 @@
 		0D80A0182D2E3CA500557D5E /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0D80A0192D2E3CA500557D5E /* PasswordRecoveryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryView.swift; sourceTree = "<group>"; };
 		0D80A01B2D2E3CA500557D5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PatientCare/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0D80A01C2D2E3CA500557D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = PatientCare/Assets.xcassets; sourceTree = "<group>"; };
+		0D80A01C2D2E3CA500557D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D80A01D2D2E3CA500557D5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0D80A01F2D2E3CA500557D5E /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = PatientCare/RootView.swift; sourceTree = "<group>"; };
+		0D80A01F2D2E3CA500557D5E /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0D80A0202D2E3CA500557D5E /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		0DB51AF32D2FA76E0016748E /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = PatientCare/PatientData/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		0DB51AF52D2FA8320016748E /* PatientDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientDataModel.swift; path = PatientCare/PatientData/PatientDataModel.swift; sourceTree = SOURCE_ROOT; };
+		0DB51AF62D2FA8320016748E /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthKitManager.swift; path = PatientCare/PatientData/HealthKitManager.swift; sourceTree = SOURCE_ROOT; };
+		0DB51AFB2D2FB38C0016748E /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
+		0DB51AFD2D2FB4610016748E /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
+		0DE60DD92D2E885100966C8B /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
+		0DEC108C2D2F8C05008DE364 /* PatientCare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PatientCare.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,13 +155,7 @@
 		0D809FDB2D2E3BC900557D5E = {
 			isa = PBXGroup;
 			children = (
-				0D80A01C2D2E3CA500557D5E /* Assets.xcassets */,
-				0D80A01A2D2E3CA500557D5E /* AuthGroup */,
-				0D80A0212D2E3CA500557D5E /* FirebaseInteraction */,
 				0D80A01B2D2E3CA500557D5E /* GoogleService-Info.plist */,
-				0D80A0142D2E3CA500557D5E /* Home */,
-				0D80A01E2D2E3CA500557D5E /* Preview Content */,
-				0D80A01F2D2E3CA500557D5E /* RootView.swift */,
 				0D809FE62D2E3BC900557D5E /* PatientCare */,
 				0D809FF72D2E3BD400557D5E /* PatientCareTests */,
 				0D80A0012D2E3BD400557D5E /* PatientCareUITests */,
@@ -173,7 +176,17 @@
 		0D809FE62D2E3BC900557D5E /* PatientCare */ = {
 			isa = PBXGroup;
 			children = (
+				0DB51AFA2D2FB3660016748E /* Simulations */,
+				0D80A01C2D2E3CA500557D5E /* Assets.xcassets */,
+				0D80A0602D2E466A00557D5E /* PatientData */,
+				0D80A01A2D2E3CA500557D5E /* AuthGroup */,
+				0D80A0212D2E3CA500557D5E /* FirebaseInteraction */,
+				0D80A0142D2E3CA500557D5E /* Home */,
+				0D80A01E2D2E3CA500557D5E /* Preview Content */,
+				0DEC108C2D2F8C05008DE364 /* PatientCare.entitlements */,
+				0D80A01F2D2E3CA500557D5E /* RootView.swift */,
 				0D809FE72D2E3BC900557D5E /* PatientCareApp.swift */,
+				0DE60DD92D2E885100966C8B /* PermissionView.swift */,
 				0D809FEB2D2E3BD200557D5E /* Assets.xcassets */,
 				0D809FED2D2E3BD200557D5E /* Preview Content */,
 			);
@@ -209,11 +222,10 @@
 			isa = PBXGroup;
 			children = (
 				0D80A0112D2E3CA500557D5E /* HomeView.swift */,
-				0D80A0122D2E3CA500557D5E /* HomeViewModel.swift */,
+				0DB51AF32D2FA76E0016748E /* HomeViewModel.swift */,
 				0D80A0132D2E3CA500557D5E /* UserDataModel.swift */,
 			);
-			name = Home;
-			path = PatientCare/Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		0D80A01A2D2E3CA500557D5E /* AuthGroup */ = {
@@ -225,8 +237,7 @@
 				0D80A0182D2E3CA500557D5E /* LoginView.swift */,
 				0D80A0192D2E3CA500557D5E /* PasswordRecoveryView.swift */,
 			);
-			name = AuthGroup;
-			path = PatientCare/AuthGroup;
+			path = AuthGroup;
 			sourceTree = "<group>";
 		};
 		0D80A01E2D2E3CA500557D5E /* Preview Content */ = {
@@ -234,8 +245,7 @@
 			children = (
 				0D80A01D2D2E3CA500557D5E /* Preview Assets.xcassets */,
 			);
-			name = "Preview Content";
-			path = "PatientCare/Preview Content";
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		0D80A0212D2E3CA500557D5E /* FirebaseInteraction */ = {
@@ -243,8 +253,26 @@
 			children = (
 				0D80A0202D2E3CA500557D5E /* FirebaseManager.swift */,
 			);
-			name = FirebaseInteraction;
-			path = PatientCare/FirebaseInteraction;
+			path = FirebaseInteraction;
+			sourceTree = "<group>";
+		};
+		0D80A0602D2E466A00557D5E /* PatientData */ = {
+			isa = PBXGroup;
+			children = (
+				0DB51AF62D2FA8320016748E /* HealthKitManager.swift */,
+				0DB51AF52D2FA8320016748E /* PatientDataModel.swift */,
+			);
+			name = PatientData;
+			path = ../PatientData;
+			sourceTree = "<group>";
+		};
+		0DB51AFA2D2FB3660016748E /* Simulations */ = {
+			isa = PBXGroup;
+			children = (
+				0DB51AFB2D2FB38C0016748E /* SimulationView.swift */,
+				0DB51AFD2D2FB4610016748E /* SimulationViewModel.swift */,
+			);
+			path = Simulations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,8 +410,6 @@
 			files = (
 				0D809FEF2D2E3BD200557D5E /* Preview Assets.xcassets in Resources */,
 				0D809FEC2D2E3BD200557D5E /* Assets.xcassets in Resources */,
-				0D80A02C2D2E3CA500557D5E /* Preview Assets.xcassets in Resources */,
-				0D80A02B2D2E3CA500557D5E /* Assets.xcassets in Resources */,
 				0D80A02A2D2E3CA500557D5E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,12 +440,17 @@
 				0D80A0262D2E3CA500557D5E /* AuthManager.swift in Sources */,
 				0D809FE82D2E3BC900557D5E /* PatientCareApp.swift in Sources */,
 				0D80A02E2D2E3CA500557D5E /* FirebaseManager.swift in Sources */,
+				0DB51AFE2D2FB4610016748E /* SimulationViewModel.swift in Sources */,
 				0D80A02D2D2E3CA500557D5E /* RootView.swift in Sources */,
 				0D80A0272D2E3CA500557D5E /* AuthViewModel.swift in Sources */,
-				0D80A0232D2E3CA500557D5E /* HomeViewModel.swift in Sources */,
+				0DE60DDA2D2E885100966C8B /* PermissionView.swift in Sources */,
 				0D80A0252D2E3CA500557D5E /* AuthDataModel.swift in Sources */,
+				0DB51AF82D2FA8320016748E /* HealthKitManager.swift in Sources */,
 				0D80A0282D2E3CA500557D5E /* LoginView.swift in Sources */,
+				0DB51AF42D2FA76E0016748E /* HomeViewModel.swift in Sources */,
+				0DB51AFC2D2FB38C0016748E /* SimulationView.swift in Sources */,
 				0D80A0222D2E3CA500557D5E /* HomeView.swift in Sources */,
+				0DB51AF72D2FA8320016748E /* PatientDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,11 +611,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PatientCare/PatientCare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PatientCare/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need your health data access to proceed";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need your health data access to proceed";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -608,11 +642,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PatientCare/PatientCare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PatientCare/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "We need your health data access to proceed";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "We need your health data access to proceed";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

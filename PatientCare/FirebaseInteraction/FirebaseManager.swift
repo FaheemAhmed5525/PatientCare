@@ -39,5 +39,36 @@ final class FirebaseManager {
             complition(false)
         }
     }
+    
+    
+    func pushDataToFirebase(data: PatientDataModel, to inCollection: String = "Data") async throws {
+        if let userId = AuthManager.shared.user?.uid {
+            
+            let dataDictionary: [String: Any] = [
+                "BloodOxygen": data.bloodOxygen,
+                "BloodPressureSystolic": data.bloodPressureSystolic,
+                "BloodPressureDiastolic" : data.bloodPressureDiastolic,
+                "BodyTemprature": data.bodyTemprature,
+                "HeartRate": data.heartRate,
+                "RecordTime": data.recordTime
+            ]
+            
+            let timeStamp = ISO8601DateFormatter().string(from: data.recordTime)
+            
+            
+            DispatchQueue.main.async {
+                Firestore.firestore().collection("Patient").document(userId).collection(inCollection).document(timeStamp).setData(dataDictionary) { error in
+                    if let error = error {
+                        print("Error while pushing patient data: \(error)")
+                    } else {
+                        print("Patient data pushed successfully")
+                    }
+                }
+                
+            }
+        }
+    }
 
 }
+
+

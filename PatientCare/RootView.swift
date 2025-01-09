@@ -10,10 +10,9 @@ import SwiftUI
 struct RootView: View {
     
     @State private var showAuthView: Bool = false
-    
     var body: some View {
         NavigationStack {
-            HomeView(showAuthView: $showAuthView)
+                HomeView(showAuthView: $showAuthView)
         }
         .onAppear {
             let authResult = try? AuthManager.shared.getCurrentUser()
