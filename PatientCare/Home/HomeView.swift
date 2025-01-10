@@ -6,6 +6,7 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @Binding var showAuthView: Bool
     
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -30,6 +31,9 @@ struct HomeView: View {
                             .foregroundColor(.white)
                             .font(.headline)
                     }
+                }
+                .onAppear {
+                    viewModel.startTimer()
                 }
                 .buttonStyle(PlainButtonStyle())
                 .padding(.top, 40)
@@ -73,6 +77,8 @@ struct HomeView: View {
             .navigationTitle("")
         }
     }
+    
+    
 }
 
 #Preview {

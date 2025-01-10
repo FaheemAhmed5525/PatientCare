@@ -5,8 +5,6 @@
 //  Created by Faheem Ahmed on 03/01/2025.
 //
 
-
-
 import SwiftUI
 
 struct LoginView: View {
@@ -49,19 +47,19 @@ struct LoginView: View {
             }
             .padding(.horizontal)
             
-            // Forgot Password Link
-            HStack {
-                Spacer()
-                NavigationLink {
-                    PasswordRecoveryView(showAuthView: $showAuthView)
-                } label: {
-                    Text("Forgot Password?")
-                        .font(.subheadline)
-                        .foregroundColor(.blue)
-                        .underline()
-                }
-            }
-            .padding([.horizontal, .top])
+//            // Forgot Password Link
+//            HStack {
+//                Spacer()
+//                NavigationLink {
+//                    PasswordRecoveryView(showAuthView: $showAuthView)
+//                } label: {
+//                    Text("Forgot Password?")
+//                        .font(.subheadline)
+//                        .foregroundColor(.blue)
+//                        .underline()
+//                }
+//            }
+//            .padding([.horizontal, .top])
             
             // Message and Login Button
             VStack(spacing: 16) {
@@ -75,25 +73,7 @@ struct LoginView: View {
                 
                 // Login Button
                 Button {
-                    viewModel.signInPatient {outcome in
-                        if outcome == .emptyInput {
-                            viewModel.messageColor = .red
-                            viewModel.message = "Empty email or password!"
-                        } else if outcome == .invalid {
-                            viewModel.messageColor = .red
-                            viewModel.message = "Invalid email or password!"
-                        } else if outcome == .unAuthorized {
-                            viewModel.messageColor = .red
-                            viewModel.message = "Only patients can SignIn here!"
-                        } else if outcome == .checking {
-                            viewModel.messageColor = .green
-                            viewModel.message = "Check account details..."
-                        } else if outcome == .authorized {
-                            viewModel.messageColor = .green
-                            viewModel.message = "Authentication completed"
-                            showAuthView = false
-                        }
-                    }
+                    handleLoginAction()
                 } label: {
                     Text("Login")
                         .font(.title2)
@@ -109,13 +89,31 @@ struct LoginView: View {
         
         Spacer()
     }
+    
+    private func handleLoginAction() {
+        viewModel.signInPatient { outcome in
+            switch outcome {
+            case .emptyInput:
+                showMessage("Empty email or password!", color: .red)
+            case .invalid:
+                showMessage("Invalid email or password!", color: .red)
+            case .unAuthorized:
+                showMessage("Only patients can SignIn here!", color: .red)
+            case .checking:
+                showMessage("Checking account details...", color: .green)
+            case .authorized:
+                showMessage("Authentication completed", color: .green)
+                showAuthView = false
+            }
+        }
+    }
+    
+    private func showMessage(_ message: String, color: Color) {
+        viewModel.message = message
+        viewModel.messageColor = color
+    }
 }
 
 #Preview {
     LoginView(showAuthView: .constant(true))
 }
-
-
-
-
-

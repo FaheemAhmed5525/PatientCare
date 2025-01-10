@@ -11,64 +11,61 @@ import FirebaseFirestore
 
 final class FirebaseManager {
     static let shared = FirebaseManager()
-    let database = Firestore.firestore()
+    private let database = Firestore.firestore()
     
     private init() {}
     
-    func isPatient(userId: String, complition: @escaping(Bool)->Void){
+    // Check if the user is a patient
+    func isPatient(userId: String, completion: @escaping (Bool) -> Void) {
+        // Reference to the "Patient" document
+        let patientRef = database.collection("Patient").document(userId)
+        print("Checking for patient with User ID: \(userId)")
         
-        //get the patient if exits:
-        let data = Firestore.firestore().collection("Patient").document(userId)
-        print("Userid: \(userId)")
-        
-        data.getDocument { (document, error) in
+        patientRef.getDocument { (document, error) in
             if let error = error {
-                print("Error occured \(error.localizedDescription)")
-                complition(false)
+                print("Error occurred while fetching patient data: \(error.localizedDescription)")
+                completion(false)
                 return
             }
             
             if let document = document, document.exists {
-                
-                ///Retriving the data
-                let name = document.get("Name") as? String ?? ""
+                // Retrieving patient name
+                let name = document.get("Name") as? String ?? "Unknown"
                 print("Patient name: \(name)")
-                complition(true)
-                return
-            }
-            complition(false)
-        }
-    }
-    
-    
-    func pushDataToFirebase(data: PatientDataModel, to inCollection: String = "Data") async throws {
-        if let userId = AuthManager.shared.user?.uid {
-            
-            let dataDictionary: [String: Any] = [
-                "BloodOxygen": data.bloodOxygen,
-                "BloodPressureSystolic": data.bloodPressureSystolic,
-                "BloodPressureDiastolic" : data.bloodPressureDiastolic,
-                "BodyTemprature": data.bodyTemprature,
-                "HeartRate": data.heartRate,
-                "RecordTime": data.recordTime
-            ]
-            
-            let timeStamp = ISO8601DateFormatter().string(from: data.recordTime)
-            
-            
-            DispatchQueue.main.async {
-                Firestore.firestore().collection("Patient").document(userId).collection(inCollection).document(timeStamp).setData(dataDictionary) { error in
-                    if let error = error {
-                        print("Error while pushing patient data: \(error)")
-                    } else {
-                        print("Patient data pushed successfully")
-                    }
-                }
-                
+                completion(true)
+            } else {
+                completion(false)
             }
         }
     }
-
+    
+    // Push patient data to Firestore
+    func pushDataToFirebase(data: PatientDataModel, to collection: String = "Data") async throws {
+        guard let userId = AuthManager.shared.user?.uid else {
+            throw NSError(domain: "FirebaseManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "User ID not found"])
+        }
+        
+        let dataDictionary: [String: Any] = [
+            "BloodOxygen": data.bloodOxygen,
+            "BloodPressureSystolic": data.bloodPressureSystolic,
+            "BloodPressureDiastolic": data.bloodPressureDiastolic,
+            "BodyTemprature": data.bodyTemprature,
+            "HeartRate": data.heartRate,
+            "RecordTime": data.recordTime
+        ]
+        
+        let timeStamp = ISO8601DateFormatter().string(from: data.recordTime)
+        
+        // Push the data to Firestore
+        let documentRef = database.collection("Patient").document(userId).collection(collection).document(timeStamp)
+        
+        do {
+            try await documentRef.setData(dataDictionary)
+            print("Patient data pushed successfully to Firestore")
+        } catch let error {
+            print("Error while pushing patient data: \(error.localizedDescription)")
+            throw error
+        }
+    }
 }
-
 

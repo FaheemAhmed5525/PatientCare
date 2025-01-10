@@ -19,7 +19,6 @@
 		0D80A0262D2E3CA500557D5E /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0162D2E3CA500557D5E /* AuthManager.swift */; };
 		0D80A0272D2E3CA500557D5E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0172D2E3CA500557D5E /* AuthViewModel.swift */; };
 		0D80A0282D2E3CA500557D5E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0182D2E3CA500557D5E /* LoginView.swift */; };
-		0D80A0292D2E3CA500557D5E /* PasswordRecoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0192D2E3CA500557D5E /* PasswordRecoveryView.swift */; };
 		0D80A02A2D2E3CA500557D5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D80A01B2D2E3CA500557D5E /* GoogleService-Info.plist */; };
 		0D80A02D2D2E3CA500557D5E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A01F2D2E3CA500557D5E /* RootView.swift */; };
 		0D80A02E2D2E3CA500557D5E /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D80A0202D2E3CA500557D5E /* FirebaseManager.swift */; };
@@ -47,11 +46,12 @@
 		0D80A05B2D2E3D1F00557D5E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A05A2D2E3D1F00557D5E /* FirebaseStorage */; };
 		0D80A05D2D2E3D1F00557D5E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A05C2D2E3D1F00557D5E /* FirebaseStorageCombine-Community */; };
 		0D80A05F2D2E3D1F00557D5E /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0D80A05E2D2E3D1F00557D5E /* FirebaseVertexAI */; };
-		0DB51AF42D2FA76E0016748E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AF32D2FA76E0016748E /* HomeViewModel.swift */; };
-		0DB51AF72D2FA8320016748E /* PatientDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AF52D2FA8320016748E /* PatientDataModel.swift */; };
-		0DB51AF82D2FA8320016748E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AF62D2FA8320016748E /* HealthKitManager.swift */; };
+		0DA81CA82D30EE3400D7F6DE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA81CA42D30EE3400D7F6DE /* HomeViewModel.swift */; };
+		0DA81CAD2D30EE7A00D7F6DE /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA81CAC2D30EE7A00D7F6DE /* HealthKitManager.swift */; };
+		0DA81CAF2D30EE8800D7F6DE /* PatientDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA81CAE2D30EE8800D7F6DE /* PatientDataModel.swift */; };
 		0DB51AFC2D2FB38C0016748E /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AFB2D2FB38C0016748E /* SimulationView.swift */; };
 		0DB51AFE2D2FB4610016748E /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB51AFD2D2FB4610016748E /* SimulationViewModel.swift */; };
+		0DBA47192D2FE3ED0012595A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBA47182D2FE3ED0012595A /* Launch Screen.storyboard */; };
 		0DE60DDA2D2E885100966C8B /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE60DD92D2E885100966C8B /* PermissionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,17 +88,17 @@
 		0D80A0162D2E3CA500557D5E /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		0D80A0172D2E3CA500557D5E /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0D80A0182D2E3CA500557D5E /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		0D80A0192D2E3CA500557D5E /* PasswordRecoveryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryView.swift; sourceTree = "<group>"; };
 		0D80A01B2D2E3CA500557D5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PatientCare/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0D80A01C2D2E3CA500557D5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D80A01D2D2E3CA500557D5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0D80A01F2D2E3CA500557D5E /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		0D80A0202D2E3CA500557D5E /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		0DA81CA42D30EE3400D7F6DE /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0DA81CAC2D30EE7A00D7F6DE /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		0DA81CAE2D30EE8800D7F6DE /* PatientDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDataModel.swift; sourceTree = "<group>"; };
 		0DB51AF32D2FA76E0016748E /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = PatientCare/PatientData/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
-		0DB51AF52D2FA8320016748E /* PatientDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientDataModel.swift; path = PatientCare/PatientData/PatientDataModel.swift; sourceTree = SOURCE_ROOT; };
-		0DB51AF62D2FA8320016748E /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthKitManager.swift; path = PatientCare/PatientData/HealthKitManager.swift; sourceTree = SOURCE_ROOT; };
 		0DB51AFB2D2FB38C0016748E /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
 		0DB51AFD2D2FB4610016748E /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
+		0DBA47182D2FE3ED0012595A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0DE60DD92D2E885100966C8B /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
 		0DEC108C2D2F8C05008DE364 /* PatientCare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PatientCare.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,9 +176,8 @@
 		0D809FE62D2E3BC900557D5E /* PatientCare */ = {
 			isa = PBXGroup;
 			children = (
+				0DA81CA62D30EE3400D7F6DE /* PatientData */,
 				0DB51AFA2D2FB3660016748E /* Simulations */,
-				0D80A01C2D2E3CA500557D5E /* Assets.xcassets */,
-				0D80A0602D2E466A00557D5E /* PatientData */,
 				0D80A01A2D2E3CA500557D5E /* AuthGroup */,
 				0D80A0212D2E3CA500557D5E /* FirebaseInteraction */,
 				0D80A0142D2E3CA500557D5E /* Home */,
@@ -189,6 +188,7 @@
 				0DE60DD92D2E885100966C8B /* PermissionView.swift */,
 				0D809FEB2D2E3BD200557D5E /* Assets.xcassets */,
 				0D809FED2D2E3BD200557D5E /* Preview Content */,
+				0DBA47182D2FE3ED0012595A /* Launch Screen.storyboard */,
 			);
 			path = PatientCare;
 			sourceTree = "<group>";
@@ -235,7 +235,6 @@
 				0D80A0162D2E3CA500557D5E /* AuthManager.swift */,
 				0D80A0172D2E3CA500557D5E /* AuthViewModel.swift */,
 				0D80A0182D2E3CA500557D5E /* LoginView.swift */,
-				0D80A0192D2E3CA500557D5E /* PasswordRecoveryView.swift */,
 			);
 			path = AuthGroup;
 			sourceTree = "<group>";
@@ -256,14 +255,14 @@
 			path = FirebaseInteraction;
 			sourceTree = "<group>";
 		};
-		0D80A0602D2E466A00557D5E /* PatientData */ = {
+		0DA81CA62D30EE3400D7F6DE /* PatientData */ = {
 			isa = PBXGroup;
 			children = (
-				0DB51AF62D2FA8320016748E /* HealthKitManager.swift */,
-				0DB51AF52D2FA8320016748E /* PatientDataModel.swift */,
+				0DA81CA42D30EE3400D7F6DE /* HomeViewModel.swift */,
+				0DA81CAC2D30EE7A00D7F6DE /* HealthKitManager.swift */,
+				0DA81CAE2D30EE8800D7F6DE /* PatientDataModel.swift */,
 			);
-			name = PatientData;
-			path = ../PatientData;
+			path = PatientData;
 			sourceTree = "<group>";
 		};
 		0DB51AFA2D2FB3660016748E /* Simulations */ = {
@@ -410,6 +409,7 @@
 			files = (
 				0D809FEF2D2E3BD200557D5E /* Preview Assets.xcassets in Resources */,
 				0D809FEC2D2E3BD200557D5E /* Assets.xcassets in Resources */,
+				0DBA47192D2FE3ED0012595A /* Launch Screen.storyboard in Resources */,
 				0D80A02A2D2E3CA500557D5E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +435,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D80A0292D2E3CA500557D5E /* PasswordRecoveryView.swift in Sources */,
+				0DA81CA82D30EE3400D7F6DE /* HomeViewModel.swift in Sources */,
+				0DA81CAF2D30EE8800D7F6DE /* PatientDataModel.swift in Sources */,
 				0D80A0242D2E3CA500557D5E /* UserDataModel.swift in Sources */,
 				0D80A0262D2E3CA500557D5E /* AuthManager.swift in Sources */,
 				0D809FE82D2E3BC900557D5E /* PatientCareApp.swift in Sources */,
@@ -445,12 +446,10 @@
 				0D80A0272D2E3CA500557D5E /* AuthViewModel.swift in Sources */,
 				0DE60DDA2D2E885100966C8B /* PermissionView.swift in Sources */,
 				0D80A0252D2E3CA500557D5E /* AuthDataModel.swift in Sources */,
-				0DB51AF82D2FA8320016748E /* HealthKitManager.swift in Sources */,
+				0DA81CAD2D30EE7A00D7F6DE /* HealthKitManager.swift in Sources */,
 				0D80A0282D2E3CA500557D5E /* LoginView.swift in Sources */,
-				0DB51AF42D2FA76E0016748E /* HomeViewModel.swift in Sources */,
 				0DB51AFC2D2FB38C0016748E /* SimulationView.swift in Sources */,
 				0D80A0222D2E3CA500557D5E /* HomeView.swift in Sources */,
-				0DB51AF72D2FA8320016748E /* PatientDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

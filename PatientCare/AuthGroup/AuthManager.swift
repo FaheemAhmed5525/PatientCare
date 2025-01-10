@@ -8,36 +8,44 @@
 import Foundation
 import FirebaseAuth
 
-final class AuthManager {
+final class AuthManager: ObservableObject {
     static let shared = AuthManager()
-    @Published var user: AuthDataModel?
+    
+    @Published private(set) var user: AuthDataModel?
     
     private init() {}
     
-    
-    //current user of the session
+    // Get the current user session
     func getCurrentUser() throws -> AuthDataModel {
-        guard let user = Auth.auth().currentUser else {
-            print("Can't get current user")
-            throw URLError(.badServerResponse)
+        guard let currentUser = Auth.auth().currentUser else {
+            print("No current user found")
+            throw URLError(.userAuthenticationRequired)
         }
-        print("Getting user, \(user.uid)")
-        self.user = AuthDataModel(user: user)
-        return AuthDataModel(user: user)
+        print("Getting user: \(currentUser.uid)")
+        self.user = AuthDataModel(user: currentUser)
+        return self.user!
     }
     
-    ///Log in any user
+    /// Log in user with email and password
     func loginUser(email: String, password: String) async throws -> AuthDataModel {
-        let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
-        self.user = AuthDataModel(user: authResult.user)
-        return AuthDataModel(user: authResult.user)
+        do {
+            let authResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.user = AuthDataModel(user: authResult.user)
+            return self.user!
+        } catch {
+            print("Error signing in: \(error.localizedDescription)")
+            throw error
+        }
     }
     
-    
-    //log out user
+    // Sign out the current user
     func signOut() throws {
-        try Auth.auth().signOut()
-        self.user = nil
+        do {
+            try Auth.auth().signOut()
+            self.user = nil
+        } catch {
+            print("Error signing out: \(error.localizedDescription)")
+            throw error
+        }
     }
-    
 }

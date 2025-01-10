@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 import FirebaseAuth
 
-
 @MainActor
 final class AuthViewModel: ObservableObject {
     
@@ -23,7 +22,8 @@ final class AuthViewModel: ObservableObject {
     func signInPatient(completion: @escaping (AuthOutCome) -> Void) {
         // Validate input
         guard !email.isEmpty, !password.isEmpty else {
-            print("Empty email or password!")
+            message = "Email and password cannot be empty"
+            messageColor = .red
             completion(.emptyInput)
             return
         }
@@ -33,9 +33,10 @@ final class AuthViewModel: ObservableObject {
                 // Account authentication
                 let authResult = try await AuthManager.shared.loginUser(email: email, password: password)
                 handleLoginSuccess(authResult: authResult, completion: completion)
-                
             } catch {
-                handleLoginFailure(completion: completion)
+                message = "Invalid email or password"
+                messageColor = .red
+                completion(.invalid)
             }
         }
     }
@@ -43,7 +44,7 @@ final class AuthViewModel: ObservableObject {
     // MARK: - Private Methods
     private func handleLoginSuccess(authResult: AuthDataModel, completion: @escaping (AuthOutCome) -> Void) {
         print("Login successful")
-        print(authResult.uid)
+        print("User ID: \(authResult.uid)")
         
         completion(.checking)
         
@@ -59,10 +60,9 @@ final class AuthViewModel: ObservableObject {
         }
     }
     
-    
-    
     private func handleLoginFailure(completion: @escaping(AuthOutCome)->Void) {
-        print("Invalid email or password")
+        message = "Invalid email or password"
+        messageColor = .red
         completion(.invalid)
     }
     
@@ -71,15 +71,17 @@ final class AuthViewModel: ObservableObject {
             do {
                 try AuthManager.shared.signOut()
             } catch {
-                print("Error while signing out")
+                message = "Error while signing out"
+                messageColor = .red
+                print("Error while signing out: \(error.localizedDescription)")
             }
         }
         
-        print("Only patients can sign in here")
+        message = "Only patients can sign in here"
+        messageColor = .orange
         completion(.unAuthorized)
     }
 }
-
 
 enum AuthOutCome {
     case emptyInput

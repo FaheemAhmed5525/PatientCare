@@ -12,6 +12,9 @@ class HealthKitManager {
     static let shared = HealthKitManager()
     let healthStore = HKHealthStore()
     
+    
+    
+    
     //MARK: - Public methods
     func fetchHealthData(completion: @escaping(PatientDataModel?)->Void) {
         guard HKHealthStore.isHealthDataAvailable() else {
